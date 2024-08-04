@@ -88,6 +88,18 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
             });
         }
 
-        console.log(cart);
+        //1. Calculate the quantity.
+        let cartQuantity = 0;
+
+        cart.forEach((item)=>{
+          cartQuantity += item.quantity;
+        })
+        // console.log(cartQuantity)
+        // console.log(cart);
+        
+        //2. Put the quantity on the page (using the DOM)
+        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+
+        
     });
 });
