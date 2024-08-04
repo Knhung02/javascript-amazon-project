@@ -1,4 +1,8 @@
-productsHTML = '';
+import { cart as myCart } from "../data/cart";
+
+const cart = [];
+
+let productsHTML = '';
 
 products.forEach((product)=>{
     //combine this HTML together
@@ -96,7 +100,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
         })
         // console.log(cartQuantity)
         // console.log(cart);
-        
+
         //2. Put the quantity on the page (using the DOM)
         document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
